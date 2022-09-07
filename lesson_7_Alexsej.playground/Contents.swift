@@ -92,6 +92,14 @@ print("")
 //То же задание тольк сделать его спомошью масима тюплов
 let nameMons = (["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"], ["31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"])
 
+for i in 0...nameMons.0.count - 1 {
+    print("\(nameMons.0[i]) - \(nameMons.1[i]) ")
+}
+print("")
+for i in (0...nameMons.0.count - 1).reversed() {
+    print("\(nameMons.0[i]) - \(nameMons.1[i])")
+}
+print(")
 //Посчитать колисество дней до дня рождения
 
 //Содать массив опциональных интеджеров как в пред идущем задании какие-то из них nil а какие-то int и спомощью цыкоа посчитать сумму тремя способами
