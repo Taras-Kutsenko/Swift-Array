@@ -1,5 +1,7 @@
 //Массивы
 
+import Foundation
+
 let constArray : [String] = ["a", "b", "c", "d"]
 
 constArray.count //Считает количество элементов в массиве
@@ -72,7 +74,7 @@ print("\n")
 print("ДОМАШНЕЕ ЗАДАНИЕ!\n")
 
 //Создать масив в котором 12 елементов (месяцы) а именно количество дней в месяце
-let mons = ["31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"]
+let mons = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 //Создать масив с названиями месяцев
 let names = ["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"]
@@ -90,7 +92,7 @@ for i in (0...names.count - 1).reversed() {
 print("")
 
 //То же задание тольк сделать его спомошью масима тюплов
-let nameMons = (["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"], ["31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31"])
+let nameMons = (["Styczen", "Luty", "Marzec", "Kwiecien", "Maj", "Czerwiec", "Lipiec", "Sierpien", "Wrzesien", "Pazdziernik", "Listopad", "Grudzien"], [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31])
 
 for i in 0...nameMons.0.count - 1 {
     print("\(nameMons.0[i]) - \(nameMons.1[i]) ")
@@ -99,9 +101,18 @@ print("")
 for i in (0...nameMons.0.count - 1).reversed() {
     print("\(nameMons.0[i]) - \(nameMons.1[i])")
 }
-print(")
+print("")
 //Посчитать колисество дней до дня рождения
-
+var birthday = (mons:"", days:0)
+birthday.mons = "Marzec"
+birthday.days = 27
+if birthday.mons == nameMons.0[0] {
+    print("\(birthday.days - 1) days left until my birthday\n")
+} else if birthday.mons == nameMons.0[1] {
+    print("\(nameMons.1[0] + birthday.days - 1) days left until my birthday\n")
+} else if birthday.mons == nameMons.0[2] {
+    print("\(nameMons.1[0] + nameMons.1[1] + birthday.days - 1) days left until my birthday\n")
+}
 //Содать массив опциональных интеджеров как в пред идущем задании какие-то из них nil а какие-то int и спомощью цыкоа посчитать сумму тремя способами
 //1. optionalBunding
 //2. forseUnReaping
